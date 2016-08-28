@@ -14,26 +14,26 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "mongo_datasource"
   },
   "AccessToken": {
-    "dataSource": "db",
+    "dataSource": "mongo_datasource",
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "mongo_datasource",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "mongo_datasource",
     "public": false
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "mongo_datasource",
     "public": false
   },
   "player": {
-    "dataSource": "db",
+    "dataSource": "mongo_datasource",
     "public": true
   }
 }
