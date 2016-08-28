@@ -6,7 +6,6 @@
   "mongo_datasource": {
     "host": "mongodb://$OPENSHIFT_MONGODB_DB_HOST",
     "port": "$OPENSHIFT_MONGODB_DB_PORT",
-    "url": "mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/",
     "database": "phase10scorecard",
     "password": "uVMNSTcEWzFw",
     "name": "mongo_datasource",
