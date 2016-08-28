@@ -4,8 +4,8 @@
     "connector": "memory"
   },
   "mongo_datasource": {
-    "host": "$OPENSHIFT_MONGODB_DB_HOST",
-    "port": "$OPENSHIFT_MONGODB_DB_PORT",
+    "host": process.env.OPENSHIFT_MONGODB_DB_HOST,
+    "port": process.env.OPENSHIFT_MONGODB_DB_PORT,
     "database": "phase10scorecard",
     "password": "uVMNSTcEWzFw",
     "name": "mongo_datasource",
