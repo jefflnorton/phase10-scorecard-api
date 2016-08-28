@@ -4,7 +4,7 @@
     "connector": "memory"
   },
   "mongo_datasource": {
-    "url": "process.env.OPENSHIFT_MONGODB_DB_URL"
+    "url": "process.env.OPENSHIFT_MONGODB_DB_URL",
     "name": "mongo_datasource",
     "user": "admin",
     "connector": "mongodb"
