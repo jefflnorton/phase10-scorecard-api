@@ -32,12 +32,20 @@
     "dataSource": "mongo_datasource",
     "public": false
   },
-  "player": {
+  "Player": {
     "dataSource": "mongo_datasource",
     "public": true
   },
   "user": {
     "dataSource": "db",
     "public": false
+  },
+  "Game": {
+    "dataSource": "mongo_datasource",
+    "public": true
+  },
+  "Score": {
+    "dataSource": "mongo_datasource",
+    "public": true
   }
 }
