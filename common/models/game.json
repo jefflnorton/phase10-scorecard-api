@@ -1,6 +1,6 @@
 {
-  "name": "game",
-  "plural": "games",
+  "name": "Game",
+  "plural": "Games",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
