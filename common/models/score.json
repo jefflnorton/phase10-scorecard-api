@@ -32,6 +32,11 @@
   },
   "validations": [],
   "relations": {
+    "owner": {
+      "type": "belongsTo",
+      "model": "User",
+      "foreignKey": "ownerId"
+    },
     "player": {
       "type": "belongsTo",
       "model": "Player",

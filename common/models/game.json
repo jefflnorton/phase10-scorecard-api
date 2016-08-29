@@ -19,6 +19,11 @@
   },
   "validations": [],
   "relations": {
+    "owner": {
+      "type": "belongsTo",
+      "model": "User",
+      "foreignKey": "ownerId"
+    },
     "scores": {
       "type": "hasMany",
       "model": "Score",
