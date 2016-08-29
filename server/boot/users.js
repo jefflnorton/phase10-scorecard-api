@@ -45,4 +45,17 @@ module.exports = function(app) {
       });
     });
   });
+
+  User.findOrCreate({
+    where: { username: 'user1' }
+  },
+  {
+    username: 'user1',
+    email: 'user1@gmail.com',
+    password: 'password'
+  }, function(err, user) {
+    if (err) throw err;
+
+    console.log('Created user1 user:', user);
+  });
 };
