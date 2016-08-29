@@ -25,7 +25,7 @@ module.exports = function(app) {
 
       console.log('Created admin role:', role);
 
-      role.principals.find({
+      role.principals({
         where: { and: [{ principalType: RoleMapping.USER }, { principalId: user.id }] }
       }, function(err, principals) {
         if (err) throw err;
