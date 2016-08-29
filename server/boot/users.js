@@ -25,16 +25,23 @@ module.exports = function(app) {
 
       console.log('Created admin role:', role);
 
-      role.principals.findOrCreate({
+      role.principals.find({
         where: { and: [{ principalType: RoleMapping.USER }, { principalId: user.id }] }
-      },
-      {
-        principalType: RoleMapping.USER,
-        principalId: user.id
-      }, function(err, principal) {
+      }, function(err, principals) {
         if (err) throw err;
 
-        console.log('Created admin principal:', principal);
+        if (principals.length == 0) {
+          role.principals.create({
+            principalType: RoleMapping.USER,
+            principalId: user.id
+          }, function(err, principal) {
+            if (err) throw err;
+
+            console.log('Created admin principal:', principal);
+          });
+        } else {
+          console.log('Found admin principal:', principals);
+        }
       });
     });
   });
