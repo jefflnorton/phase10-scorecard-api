@@ -3,7 +3,10 @@ module.exports = function(app) {
   var Role = app.models.Role;
   var RoleMapping = app.models.RoleMapping;
 
-  User.create({
+  User.findOrCreate({
+    where: { username: 'admin' }
+  },
+  {
     username: 'admin',
     email: 'jefflnorton@gmail.com',
     password: 'password'
@@ -12,14 +15,20 @@ module.exports = function(app) {
 
     console.log('Created admin user:', user);
 
-    Role.create({
+    Role.findOrCreate({
+        where: { name: 'admin' }
+    },
+    {
       name: 'admin'
     }, function(err, role) {
       if (err) throw err;
 
       console.log('Created admin role:', role);
 
-      role.principals.create({
+      role.principals.findOrCreate({
+        where: { and: [{ principalType: RoleMapping.USER }, { principalId: user.id }] }
+      },
+      {
         principalType: RoleMapping.USER,
         principalId: user.id
       }, function(err, principal) {
