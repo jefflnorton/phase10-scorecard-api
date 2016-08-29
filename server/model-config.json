@@ -35,5 +35,9 @@
   "player": {
     "dataSource": "mongo_datasource",
     "public": true
+  },
+  "user": {
+    "dataSource": "db",
+    "public": false
   }
 }
